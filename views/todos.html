@@ -1,0 +1,10 @@
+<div class="hero-unit">
+	<form class="form-search" ng-submit="addTodo()">
+		<input ng-model="todoText" type="text" class="input-block-level search-query" placeholder="Insert your ToDo and press enter">
+	</form>
+</div>
+
+<table class="table table-striped table-hover table-bordered">
+	<tr><th style="width:50px;">ID</th><th>ToDo</th><th style="width:50px;">Done?</th></tr>
+	<tr ng-repeat="todo in todos"><td>{{todo.id}}<td>{{todo.text}}</td><td style="width:50px;"><span ng-click="archiveTodo(todo)" class="btn" href="#">Done</span></td></tr>
+</table>
